@@ -149,7 +149,7 @@ drawdate(int x, int y, int w)
 	time_t t = time(NULL);
 	struct tm *tm = localtime(&t);
 
-	strftime(date, sizeof(date), "%H:%M %A %Y-%B-%d", tm);
+	strftime(date, sizeof(date), "%A", tm);
 	drw_setscheme(drw, scheme[SchemeSel]);
 	
 	int r = drw_text(drw, x, y, w, bh, lrpad / 2, date, 0);
